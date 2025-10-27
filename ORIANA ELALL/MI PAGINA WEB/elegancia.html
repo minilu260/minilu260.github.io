@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minilu's - Catálogo de Perfumes</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #fafafa;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #f0a500;
+    }
+
+    .intro {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .intro p {
+      font-size: 1.2em;
+      max-width: 700px;
+      margin: 0 auto;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Minilu's Perfumes</h1>
+  <nav>
+    <a href="elegancia.html">Elegancia</a>
+    <a href="audacia.html">Audacia</a>
+    <a href="sensualidad.html">Sensualidad</a>
+  </nav>
+</header>
+
+<section class="intro">
+  <p>Bienvenido al catálogo de Minilu's. Descubre nuestras colecciones de perfumes y encuentra tu aroma ideal. Haz clic en una colección para explorar nuestros productos.</p>
+</section>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colección Elegancia - Minilu's</title>
+  <style>
+    body { margin:0; font-family:'Arial',sans-serif; background:#fafafa; color:#333; }
+    h2 { font-size:2em; margin:30px 0; text-align:center; color:#333; }
+    .perfumes { display:flex; flex-wrap:wrap; gap:25px; justify-content:center; padding:0 20px; }
+    .perfume { border:1px solid #ddd; border-radius:12px; width:280px; text-align:center; background:#fff; padding:20px; box-shadow:0 5px 15px rgba(0,0,0,0.1); transition:0.3s; }
+    .perfume:hover { transform:translateY(-5px); box-shadow:0 10px 20px rgba(0,0,0,0.2); }
+    .perfume img { max-width:100%; border-radius:10px; margin-bottom:15px; }
+    .perfume h3 { font-size:1.2em; margin-bottom:10px; color:#222; }
+    .perfume .descripcion { font-size:0.95em; color:#555; margin-bottom:12px; min-height:60px; }
+    .perfume .precio { font-size:1.1em; font-weight:bold; color:#111; }
+    .boton-volver { display:inline-block; margin:30px auto 50px; padding:12px 30px; background:#333; color:#fff; border-radius:8px; text-decoration:none; font-weight:bold; transition:0.3s; }
+    .boton-volver:hover { background:#555; }
+    @media(max-width:768px){ .perfumes{ flex-direction:column; align-items:center; } .perfume{ width:90%; } }
+  
+    .perfume {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: #fff;
+  padding: 20px;
+  width: 280px;
+  margin: 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.perfume img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.compra {
+  display: flex;
+  justify-content: space-between;   /* precio a la izquierda, botón a la derecha */
+  align-items: center;
+  margin-top: 12px;
+}
+
+.precio {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.btn-carrito {
+  background: #7b3f1f;          /* marrón similar al de la foto */
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95em;
+  transition: background 0.3s;
+}
+
+.btn-carrito:hover {
+  background: #915332;
+}
+  </style>
+</head>
+<body>
+
+<h2>Colección Elegancia</h2>
+<div class="perfumes">
+  <div class="perfume">
+    <img src="https://omelhorperfume.com/wp-content/uploads/2022/07/resenha-perfume-rosa-imperial-phebo-resenha-notas-rosa-imperial.png" alt="Rosa Imperial">
+    <h3>Rosa Imperial</h3>
+    <p class="descripcion">Aroma floral delicado con esencia de rosa damascena y un toque sutil de lirio blanco, ideal para ocasiones elegantes.</p>
+    <p class="precio">$55000 ARS</p>
+    <button class="btn-carrito"
+                onclick="añadirAlCarrito('Rosa Imperial', 55000)">
+          Añadir al Carrito
+        </button>
+  </div>
+  <div class="perfume">
+    <img src="https://perfumescardales.com.ar/wp-content/uploads/2022/05/linterdit-nocturnal-jasmine-edp-2.jpg" alt="Jazmín Nocturno">
+    <h3>Jazmín Nocturno</h3>
+    <p class="descripcion">Notas profundas de jazmín y gardenia combinadas con un leve fondo de ámbar, que aporta sofisticación y sensualidad.</p>
+    <p class="precio">$47000 ARS</p>
+    <button class="btn-carrito"
+                onclick="añadirAlCarrito('Rosa Imperial', 55000)">
+          Añadir al Carrito
+        </button>
+  </div>
+  <div class="perfume">
+    <img src="https://luxurious-fragrances.com/wp-content/uploads/2025/08/parfum-rp-paris-orchid-blanc.jpg" alt="Orquídea Blanca">
+    <h3>Orquídea Blanca</h3>
+    <p class="descripcion">Aroma fresco y limpio con orquídea blanca, almizcle y un toque cítrico suave que envuelve con elegancia.</p>
+    <p class="precio">$76000 ARS</p>
+    <button class="btn-carrito"
+                onclick="añadirAlCarrito('Rosa Imperial', 55000)">
+          Añadir al Carrito
+        </button>
+  </div>
+  <div class="perfume">
+    <img src="https://vader-prod.s3.amazonaws.com/1683572875-loewe-agua-6459486e72e0c.jpg" alt="Vainilla Real">
+    <h3>Vainilla Real</h3>
+    <p class="descripcion">Aroma cálido y cremoso de vainilla natural, mezclado con notas suaves de madera de sándalo y almizcle.</p>
+    <p class="precio">$35500 ARS</p>
+    <button class="btn-carrito"
+                onclick="añadirAlCarrito('Rosa Imperial', 55000)">
+          Añadir al Carrito
+        </button>
+  </div>
+  <div class="perfume">
+    <img src="https://s2.ppllstatics.com/mujerhoy/www/multimedia/202403/26/media/cortadas/perfumes-lavanda-1-rem-k5ZF--624x624@MujerHoy.jpg" alt="Lavanda de Lujo">
+    <h3>Lavanda de Lujo</h3>
+    <p class="descripcion">Fragancia relajante con lavanda francesa, un toque de bergamota y fondo de cedro que transmite calma y sofisticación.</p>
+    <p class="precio">$44500 ARS</p>
+    <button class="btn-carrito"
+                onclick="añadirAlCarrito('Rosa Imperial', 55000)">
+          Añadir al Carrito
+        </button>
+  </div>
+  <div class="perfume">
+    <img src="https://www.aguasdevictorioylucchino.com/images/perfumes/peonia-imperial/peonia-imperial-1.webp" alt="Peonía Elegante">
+    <h3>Peonía Elegante</h3>
+    <p class="descripcion">Aroma romántico y delicado con peonía, rosa y un leve toque de almizcle blanco que evoca distinción.</p>
+    <p class="precio">$25000 ARS</p>
+    <button class="btn-carrito"
+                onclick="añadirAlCarrito('Rosa Imperial', 55000)">
+          Añadir al Carrito
+        </button>
+  </div>
+</div>
+
+<a href="#" class="boton-volver" onclick="history.back(); return false;">Volver a la página principal</a>
+<script>
+  function añadirAlCarrito(nombre, precio) {
+    alert(${nombre} se añadió al carrito por $${precio} ARS);
+    // Aquí después podés guardar en localStorage o mandar a un backend real
+  }
+  </script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colección Sensualidad - Minilu's</title>
+  <style>
+    body { margin:0; font-family:'Arial',sans-serif; background:#fafafa; color:#333; }
+    h2 { font-size:2em; margin:30px 0; text-align:center; color:#333; }
+    .perfumes { display:flex; flex-wrap:wrap; gap:25px; justify-content:center; padding:0 20px; }
+    .perfume { border:1px solid #ddd; border-radius:12px; width:280px; text-align:center; background:#fff; padding:20px; box-shadow:0 5px 15px rgba(0,0,0,0.1); transition:0.3s; }
+    .perfume:hover { transform:translateY(-5px); box-shadow:0 10px 20px rgba(0,0,0,0.2); }
+    .perfume img { max-width:100%; border-radius:10px; margin-bottom:15px; }
+    .perfume h3 { font-size:1.2em; margin-bottom:10px; color:#222; }
+    .perfume .descripcion { font-size:0.95em; color:#555; margin-bottom:12px; min-height:60px; }
+    .perfume .precio { font-size:1.1em; font-weight:bold; color:#111; }
+    .boton-volver { display:inline-block; margin:30px auto 50px; padding:12px 30px; background:#333; color:#fff; border-radius:8px; text-decoration:none; font-weight:bold; transition:0.3s; }
+    .boton-volver:hover { background:#555; }
+    @media(max-width:768px){ .perfumes{ flex-direction:column; align-items:center; } .perfume{ width:90%; } }
+    .perfume {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: #fff;
+  padding: 20px;
+  width: 280px;
+  margin: 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.perfume img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.compra {
+  display: flex;
+  justify-content: space-between;   /* precio a la izquierda, botón a la derecha */
+  align-items: center;
+  margin-top: 12px;
+}
+
+.precio {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.btn-carrito {
+  background: #7b3f1f;          /* marrón similar al de la foto */
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95em;
+  transition: background 0.3s;
+}
+
+.btn-carrito:hover {
+  background: #915332;
+}
+  </style>
+</head>
+<body>
+
+<h2>Colección Sensualidad</h2>
+<div class="perfumes">
+  <div class="perfume">
+    <img src="https://perfugroupar.vtexassets.com/arquivos/ids/225268/22548289662.jpg?v=638875848951800000" alt="Ámbar Seductor">
+    <h3>Ámbar Seductor</h3>
+    <p class="descripcion">Aroma cálido y envolvente con ámbar, vainilla y un toque de pachulí, diseñado para atraer y seducir.</p>
+    <p class="precio">$66000 ARS</p>
+    <button class="btn-carrito"
+                onclick="añadirAlCarrito('Rosa Imperial', 55000)">
+          Añadir al Carrito
+        </button>
+  </div>
+  <div class="perfume">
+    <img src="https://http2.mlstatic.com/D_Q_NP_2X_978116-MLU75117699540_032024-T.webp" alt="Chocolate y Canela">
+    <h3>Chocolate y Canela</h3>
+    <p class="descripcion">Fragancia dulce y apasionada con cacao, canela y un toque de madera de cedro, perfecta para momentos íntimos.</p>
+    <p class="precio">$45500 ARS</p>
+    <button class="btn-carrito"
+                onclick="añadirAlCarrito('Rosa Imperial', 55000)">
+          Añadir al Carrito
+        </button>
+  </div>
+  <div class="perfume">
+    <img src="https://plazzagurus.s3.us-east-2.amazonaws.com/folder/products/500X500/b11007c6_Diseo_sin_ttulo_-_2024-05-08T111948.454.jpg" alt="Rosa Nocturna">
+    <h3>Rosa Nocturna</h3>
+    <p class="descripcion">Aroma floral intenso con rosas negras y jazmín, combinado con ámbar y almizcle que despierta emociones.</p>
+    <p class="precio">$66500 ARS</p>
+    <button class="btn-carrito"
+                onclick="añadirAlCarrito('Rosa Imperial', 55000)">
+          Añadir al Carrito
+        </button>
+  </div>
+  <div class="perfume">
+    <img src="https://m.media-amazon.com/images/I/5122G1-91tL._UF1000,1000_QL80_.jpg" alt="Vainilla y Miel">
+    <h3>Vainilla y Miel</h3>
+    <p class="descripcion">Fragancia dulce y cálida con vainilla, miel y un toque suave de sándalo, que envuelve con sensualidad.</p>
+    <p class="precio">$79000 ARS</p>
+    <button class="btn-carrito"
+                onclick="añadirAlCarrito('Rosa Imperial', 55000)">
+          Añadir al Carrito
+        </button>
+  </div>
+  <div class="perfume">
+    <img src="https://http2.mlstatic.com/D_Q_NP_612844-MLU71822866084_092023-O.webp" alt="Gardenia Nocturna">
+    <h3>Gardenia Nocturna</h3>
+    <p class="descripcion">Aroma floral profundo con gardenia, jazmín y almizcle blanco, que evoca misterio y atracción.</p>
+    <p class="precio">$45000 ARS</p>
+    <button class="btn-carrito"
+                onclick="añadirAlCarrito('Rosa Imperial', 55000)">
+          Añadir al Carrito
+        </button>
+  </div>
+  <div class="perfume">
+    <img src="https://s2.ppllstatics.com/mujerhoy/www/multimedia/202310/05/media/cortadas/perfumes-olor-frutos-rojos-4-dior-kgkH--624x624@MujerHoy.jpg" alt="Frutos Rojos">
+    <h3>Frutos Rojos</h3>
+    <p class="descripcion">Fragancia frutal y seductora con notas de frutos rojos, grosella y un fondo de vainilla, perfecta para ocasiones románticas.</p>
+    <p class="precio">$55500 ARS</p>
+    <button class="btn-carrito"
+                onclick="añadirAlCarrito('Rosa Imperial', 55000)">
+          Añadir al Carrito
+        </button>
+  </div>
+</div>
+
+<a href="#" class="boton-volver" onclick="history.back(); return false;">Volver a la página principal</a>
+<script>
+  function añadirAlCarrito(nombre, precio) {
+    alert(${nombre} se añadió al carrito por $${precio} ARS);
+    // Aquí después podés guardar en localStorage o mandar a un backend real
+  }
+  </script>
+</body>
+</html>

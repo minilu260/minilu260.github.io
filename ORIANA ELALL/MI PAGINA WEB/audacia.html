@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colección Audacia - Minilu's</title>
+  <style>
+    body { margin:0; font-family:'Arial',sans-serif; background:#fafafa; color:#333; }
+    h2 { font-size:2em; margin:30px 0; text-align:center; color:#333; }
+    .perfumes { display:flex; flex-wrap:wrap; gap:25px; justify-content:center; padding:0 20px; }
+    .perfume { border:1px solid #ddd; border-radius:12px; width:280px; text-align:center; background:#fff; padding:20px; box-shadow:0 5px 15px rgba(0,0,0,0.1); transition:0.3s; }
+    .perfume:hover { transform:translateY(-5px); box-shadow:0 10px 20px rgba(0,0,0,0.2); }
+    .perfume img { max-width:100%; border-radius:10px; margin-bottom:15px; }
+    .perfume h3 { font-size:1.2em; margin-bottom:10px; color:#222; }
+    .perfume .descripcion { font-size:0.95em; color:#555; margin-bottom:12px; min-height:60px; }
+    .perfume .precio { font-size:1.1em; font-weight:bold; color:#111; }
+    .boton-volver { display:inline-block; margin:30px auto 50px; padding:12px 30px; background:#333; color:#fff; border-radius:8px; text-decoration:none; font-weight:bold; transition:0.3s; }
+    .boton-volver:hover { background:#555; }
+    @media(max-width:768px){ .perfumes{ flex-direction:column; align-items:center; } .perfume{ width:90%; } }
+    .perfume {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: #fff;
+  padding: 20px;
+  width: 280px;
+  margin: 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.perfume img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.compra {
+  display: flex;
+  justify-content: space-between;   /* precio a la izquierda, botón a la derecha */
+  align-items: center;
+  margin-top: 12px;
+}
+
+.precio {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.btn-carrito {
+  background: #7b3f1f;          /* marrón similar al de la foto */
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95em;
+  transition: background 0.3s;
+}
+
+.btn-carrito:hover {
+  background: #915332;
+}
+  </style>
+</head>
+<body>
+
+<h2>Colección Audacia</h2>
+<div class="perfumes">
+  <div class="perfume">
+    <img src="https://cdn2.primor.eu/media/catalog/product/cache/8d3aba296f7a18b5251ee30fa5db42b2/8/4/8411061067291_4328.jpg" alt="Cítrico Intenso">
+    <h3>Cítrico Intenso</h3>
+    <p class="descripcion">Aroma fresco y energético con bergamota, limón y un toque de menta, perfecto para destacar la personalidad atrevida.</p>
+    <p class="precio">$33000 ARS</p>
+    <button class="btn-carrito"
+                onclick="añadirAlCarrito('Rosa Imperial', 55000)">
+          Añadir al Carrito
+        </button>
+  </div>
+  <div class="perfume">
+    <img src="https://d2eebw31vcx88p.cloudfront.net/bioesencia/uploads/60e2e5f690a24e956c9e8aa6ca91cf1cf7c828c8.jpg" alt="Pimienta Negra">
+    <h3>Pimienta Negra</h3>
+    <p class="descripcion">Notas especiadas con pimienta negra, cardamomo y madera de cedro, que transmiten fuerza y carácter audaz.</p>
+    <p class="precio">$64000 ARS</p>
+    <button class="btn-carrito"
+                onclick="añadirAlCarrito('Rosa Imperial', 55000)">
+          Añadir al Carrito
+        </button>
+  </div>
+  <div class="perfume">
+    <img src="https://perfumescardales.com.ar/wp-content/uploads/2023/07/kharma-2.jpg" alt="Fuego de Canela">
+    <h3>Fuego de Canela</h3>
+    <p class="descripcion">Fragancia cálida y envolvente con canela, nuez moscada y un fondo de ámbar, ideal para quienes se atreven a destacar.</p>
+    <p class="precio">$53500 ARS</p>
+    <button class="btn-carrito"
+                onclick="añadirAlCarrito('Rosa Imperial', 55000)">
+          Añadir al Carrito
+        </button>
+  </div>
+  <div class="perfume">
+    <img src="https://img.joomcdn.net/4ce9029dd9f22af424ab15d3ea7b1549691a7ca9_1024_1024.jpeg" alt="Bosque Oscuro">
+    <h3>Bosque Oscuro</h3>
+    <p class="descripcion">Aroma amaderado intenso con notas de pino, cedro y musgo, que proyecta confianza y misterio.</p>
+    <p class="precio">$44500 ARS</p>
+    <button class="btn-carrito"
+                onclick="añadirAlCarrito('Rosa Imperial', 55000)">
+          Añadir al Carrito
+        </button>
+  </div>
+  <div class="perfume">
+    <img src="https://www.aguasdevictorioylucchino.com/images/perfumes/frescor-extremo/frescor-extremo-2.webp" alt="Marino Extremo">
+    <h3>Marino Extremo</h3>
+    <p class="descripcion">Fragancia fresca y dinámica con notas marinas, limón y menta, ideal para personas enérgicas y aventureras.</p>
+    <p class="precio">$63000 ARS</p>
+    <button class="btn-carrito"
+                onclick="añadirAlCarrito('Rosa Imperial', 55000)">
+          Añadir al Carrito
+        </button>
+  </div>
+  <div class="perfume">
+    <img src="https://fimgs.net/mdimg/secundar/fit.120032.jpg" alt="Cardamomo Real">
+    <h3>Cardamomo Real</h3>
+    <p class="descripcion">Aroma especiado y elegante con cardamomo, vainilla y madera de sándalo, proyectando audacia y sofisticación.</p>
+    <p class="precio">$74000 ARS</p>
+    <button class="btn-carrito"
+                onclick="añadirAlCarrito('Rosa Imperial', 55000)">
+          Añadir al Carrito
+        </button>
+  </div>
+</div>
+<a href="#" class="boton-volver" onclick="history.back(); return false;">Volver a la página principal</a>
+<script>
+  function añadirAlCarrito(nombre, precio) {
+    alert(${nombre} se añadió al carrito por $${precio} ARS);
+    // Aquí después podés guardar en localStorage o mandar a un backend real
+  }
+  </script>
+</body>
+</html>
